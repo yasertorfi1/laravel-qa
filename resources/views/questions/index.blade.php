@@ -8,16 +8,16 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
-                    @foreach ($questions as $quesion)
+                    @foreach ($questions as $question)
                     <div class="media">
                         <div class="media-body">
-                            <h3 class="mt-0"><a href="{{ $question->url }}">{{ $quesion->title }}</a></h3>
+                            <h3 class="mt-0"><a href="{{ $question->url }}">{{ $question->title }}</a></h3>
                             <p class="lead">
                                 Asked By
-                                <a href="{{$question->user->url}}">{{$quesion->user->name}}</a>
-                                <small class="text-muted">{{$quesion->created_date}}</small>
+                                <a href="{{$question->user->url}}">{{$question->user->name}}</a>
+                                <small class="text-muted">{{$question->created_date}}</small>
                             </p>
-                            {{ str_limit($quesion->body, 250) }}
+                            {{ str_limit($question->body, 250) }}
                         </div>
                     </div>
                         
